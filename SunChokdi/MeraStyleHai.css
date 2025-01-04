@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+body{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(38, 38, 38);
+}
+                                        /* Board */
+ .boardStyle{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+    margin-left:9%;
+    background-color: rgb(38, 38, 38);
+ }                                       
+.board{
+    margin-top:3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 650px;
+    height: 650px;
+    background-color: wheat;
+}
+ .boxStyle{
+    position: relative;
+    background-color: rgb(38, 38, 38);
+ width: 200px;
+ height: 200px;   
+
+} 
+.boxStyle:hover{
+    cursor:pointer;
+}
+                                        /* ROW */
+ .row1{
+    justify-content: space-between;
+    display: flex;
+    
+}
+.row2{
+    justify-content: space-between;
+    display: flex;
+    
+}
+.row3{
+    justify-content: space-between;
+    display: flex;
+    
+}
+/* ----------------------------------------------------------------------------- */
+/* Hidden */
+/* ----------------------------------------------------------------------------- */
+.hidden{
+    visibility: hidden;
+}
+
+/* ----------------------------------------------------------------------------- */
+                                    /* Symbols */
+/* ----------------------------------------------------------------------------- */
+/* Cross */
+ .cross{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(205, 205, 104); */
+    width: 100%;
+    height:100%;
+}
+.line1{
+    position: absolute;
+    transform: rotate(45deg);
+    background-color: red;
+    height: 15%;
+    width: 90%;
+    border-radius: 30px;
+} 
+.line2{
+    transform: rotate(-45deg);
+    position: absolute;
+    background-color: red;
+    height: 15%;
+    width: 90%;
+    border-radius: 30px; 
+}
+/* Zero */
+
+ .circle{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    top:0;
+    bottom:0;
+    width: 100%;
+    height: 100%;
+    /* background-color: aqua; */
+    /* z-index: -1; */
+
+} 
+
+
+.circleBlock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.outerCircle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 75%;
+    height: 75%;
+    background-color: blueviolet;
+    border-radius: 50%;
+}
+.innerCircle{
+
+    position: absolute;
+    width: 75%;
+    height: 75%;
+    background-color: rgb(38, 38, 38);
+    border-radius: 50%;
+    /* z-index: 10; */
+}
+
+/* ----------------------------------------------------------------------------- */
+                                    /* Again Button */
+/* ----------------------------------------------------------------------------- */
+
+.btn {
+    margin-top: 20%;
+    margin-left: 20%;
+    font-size: 1.2em;
+    font-family: 'Press Start 2P', cursive;
+    width: 200px;
+    height: 70px;
+    background: yellowgreen;
+    border: 0px;
+    position: relative;
+    box-shadow: 
+      inset -4px 2px 1px 1px grey,
+      inset -4px -2px 1px 1px lightgray,
+      inset 4px 0px 1px 1px lightgray;   
+  }
+  
+  .btn:hover {
+    cursor: pointer;
+      background-color: #06B6D1;
+  }
+  
+  .btn:active {
+    top: 5px;
+    box-shadow: 
+      -4px 2px 1px 1px grey,
+      -4px -2px 1px 1px lightgray,
+      4px 0px 1px 1px lightgray; 
+  }
+  
+  .btn::after {
+    content: '';
+    background: black;
+    position: absolute;
+    left: -2.5%;
+    top: 0;
+    width: 105%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .btn::before {
+    content: '';
+    background: black;
+    position: absolute;
+    left: 0;
+    top: -5%;
+    width: 100%;
+    height: 113%;
+    z-index: -1;
+  }
+/* ----------------------------------------------------------------------------- */
+                                    /* Turn Message */
+/* ----------------------------------------------------------------------------- */
+.showTurn{
+    display: flex;
+    font-family: 'Press Start 2P';
+    color:yellowgreen;
+    margin-top: 2%;
+    margin-right: 5%;
+}
