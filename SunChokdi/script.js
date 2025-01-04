@@ -13,9 +13,20 @@ let Won = (a,b,c) => {
     win = true;
 
     //Coloring the win Boxes
-    document.querySelector(`${boxName[a]} .cross`).style.backgroundColor = '#fdd813';
-    document.querySelector(`${boxName[b]} .cross`).style.backgroundColor = '#fdd813';
-    document.querySelector(`${boxName[c]} .cross`).style.backgroundColor = '#fdd813';
+    if(counter%2 === 0){
+    
+        document.querySelector(`${boxName[a]} .cross`).style.backgroundColor = '#fdd813';
+        document.querySelector(`${boxName[b]} .cross`).style.backgroundColor = '#fdd813';
+        document.querySelector(`${boxName[c]} .cross`).style.backgroundColor = '#fdd813';
+    }else{
+        document.querySelector(`${boxName[a]} .circle`).style.backgroundColor = '#fdd813';
+        document.querySelector(`${boxName[b]} .circle`).style.backgroundColor = '#fdd813';
+        document.querySelector(`${boxName[c]} .circle`).style.backgroundColor = '#fdd813';
+
+        document.querySelector(`${boxName[a]} .circle .innerCircle`).style.backgroundColor = '#fdd813';
+        document.querySelector(`${boxName[b]} .circle .innerCircle`).style.backgroundColor = '#fdd813';
+        document.querySelector(`${boxName[c]} .circle .innerCircle`).style.backgroundColor = '#fdd813';
+    }
 }
 //Rule BOOKs
 let RuleBook = arr => {
